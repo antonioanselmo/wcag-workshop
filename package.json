@@ -1,0 +1,30 @@
+{
+	"name": "acessibility",
+	"version": "1.0.0",
+	"description": "frontend",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"gulp": "gulp start"
+	},
+	"author": "Seeds",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/preset-env": "^7.3.1",
+		"browser-sync": "^2.24.7",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-jsvalidate": "^5.0.0",
+		"gulp-npm-dist": "^1.0.2",
+		"gulp-sass": "^4.0.1",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-minify": "^3.1.0"
+	},
+	"dependencies": {
+		"@popperjs/core": "^2.0.0",
+		"bootstrap": "^5.1.1",
+		"material-icons": "^1.11.11"
+	}
+}

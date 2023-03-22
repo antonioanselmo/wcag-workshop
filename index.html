@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Accessibility</title>
+    <link rel="stylesheet" href="src/assets/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/assets/libs/bootstrap/dist/css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" href="src/assets/css/styles.min.css">
+</head>
+<body>
+    <div class="slide-wrapper">
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>The Web Accessibility Directive</h2>
+                            <h3>European-union</h3>
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <p>Está em vigor desde 22 de dezembro de 2016 e oferece às pessoas com deficiência um melhor acesso a sites e aplicativos de serviços públicos.</p>
+                            <p>Com isso, a União Européia está exigindo oficialmente que seus estados membros cumpram os padrões <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a> Nível AA.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                            <p class="text-end"><a href="https://www.siteimprove.com/glossary/eu-web-accessibility-directive/">EU Web Accessibility Directive</a></p>
+                            <p class="text-end"><a href="https://www.siteimprove.com/de/blog/the-eu-web-accessibility-directive-faq/">FAQ</a> About the Directive</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>Tipos de deficiência</h2>
+                            <!-- <h3>Slide subtitle</h3> -->
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <p>Seguir estas diretrizes irá tornar o conteúdo acessível a um maior número de pessoas com deficiência, incluindo:</p>
+                            <ul>
+                                <li>Cegueira e baixa visão</li>
+                                <li>Limitações cognitivas</li>
+                                <li>Limitações de movimentos</li>
+                                <li>Fotossensibilidade e combinações destas características</li>
+                                <li>Dificuldades de aprendizagem</li>
+                                <li>Surdez e baixa audição</li>
+                                <li>Incapacidade de fala</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>Ferramentas Básicas</h2>
+                            <!-- <h3>Slide subtitle</h3> -->
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <ul>
+                                <li>Avaliação de acessibilidade - <a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">Wave</a></li>
+                                <li>Validação do HTML - <a href="https://validator.w3.org/">W3 validator</a></li>
+                                <li>
+                                    Screen reader - 
+                                    <a href="https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1">Windows</a> / 
+                                    <a href="https://help.ubuntu.com/stable/ubuntu-help/a11y-screen-reader.html.en">Ubuntu</a> / 
+                                    <a href="https://support.apple.com/pt-br/guide/voiceover/welcome/mac">Mac</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>ARIA</h2>
+                            <h3>Accessible Rich Internet Applications</h3>
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <p>Sem ARIA, certas funcionalidades ficam indisponíveis para alguns usuários com deficiências, especialmente pessoas que dependem de leitores de tela ou que não podem usar um mouse.</p>
+                        </div>
+
+                        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            <div>ARIA não deve ser usado quando o HTML já fornece semântica suficiente para acessibilidade</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>ARIA Roles</h2>
+                            <!-- <h3></h3> -->
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <ul>
+                                <li>Definem o que um elemento é ou faz</li>
+                                <li>Definem funcionalidades que não estão disponíveis no HTML</li>
+                                <li>Substituem determinadas funções-padrão dos elementos HTML</li>
+                            </ul>
+                            <pre class="prettyprint">
+                                <xmp>
+    <div role="button" id="saveChanges" tabindex="0" aria-pressed="false">Save</div>
+    
+    <!-- Equivalente a -->
+    
+    <button type="button" id="saveChanges">Save</button>
+                                </xmp>
+                            </pre>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                            <p class="text-end"><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles">WAI-ARIA Roles</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>ARIA States</h2>
+                            <!-- <h3></h3> -->
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <p>São atributos que definem a condição atual de um elemento.</p>
+                            <p>Geralmente mudam com base em alguma interação feita.</p>
+                            <p>Um exemplo é:</p>
+                            <pre class="prettyprint">
+                                <xmp>
+    <!-- Menu -->
+    <button aria-expanded="false">Menu</button>
+                                </xmp>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                            <p class="text-end"><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes">ARIA states and properties</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>ARIA Properties</h2>
+                            <!-- <h3></h3> -->
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <p>Definem semânticas adicionais não suportadas no HTML padrão. <br>Um exemplo é:</p>
+                            <pre class="prettyprint">
+                                <xmp>
+    <!-- aria-haspopup -->
+    <button aria-haspopup="true">
+                                </xmp>
+                            </pre>
+                            <p>Essa propriedade faz com que um leitor de tela anuncie que o botão, se ativado, acionará um pop-up.</p>
+                            <hr><br><br>
+                            <h4>Outro exemplo:</h4>
+                            <pre class="prettyprint">
+                                <xmp>
+    <!-- aria-controls -->
+    <button role="tab" aria-controls="panel-1" aria-selected="true">First Tab</button>
+                                </xmp>
+                            </pre>
+                            <p><code>aria-controls</code> identifica o elemento (ou elementos) cujo conteúdo ou presença são controlados pelo elemento no qual este atributo é definido</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                            <p class="text-end"><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes">ARIA states and properties</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>WCAG 2.1</h2>
+                            <!-- <h3></h3> -->
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <p>O WCAG 2.1 possui aproximadamente <strong>100 princípios</strong>.</p>
+                            <p>Muitos destes princípios são de responsabilidade dos <strong>designers</strong>, como por exemplo: Contraste de cores, tamanho da fonte e espaçamento dos caracteres.</p>
+                            <p>Selecionei 16 princípios que considerei mais relevantes para nós do front-end.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                            <p class="text-end"><a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/">Web Content Accessibility Guidelines (WCAG) 2.1</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>Conteúdo Não Textual</h2>
+                            <h3>Fornecer alternativas textuais para qualquer conteúdo não textual</h3>
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <ul>
+                                <li>
+                                    <span class="criterion">Controles / Inputs:</span> Se o conteúdo não textual for um controle ou input, ele deve ter um nome que descreve sua finalidade
+                                    <pre class="prettyprint">
+                                    <xmp>
+<!-- Button -->
+<button aria-label="Close">x</button>
+
+<!-- Input -->
+<label for="input-1">Input description</label>
+<input type="text" id="input-1">
+                                    </xmp>
+                                    </pre>
+                                </li>
+                                <li>
+                                    <span class="criterion">Mídias:</span> Devem conter uma identificação descritiva do conteúdo não textual
+                                    <pre class="prettyprint">
+                                        <xmp>
+<img src="girl.jpg" alt="Girl in a jacket">
+                                        </xmp>
+                                    </pre>
+                                </li>
+                                <li>
+                                    <span class="criterion">Decoração, Formatação, Invisível:</span> Se o conteúdo for decorativo, ou se não for exibido aos usuários, deve ser ignorado pelas tecnologias assistivas
+                                    <pre class="prettyprint">
+                                        <xmp>
+<a href="#">
+    <img src="icon.svg" aria-hidden="true">
+    <span>Link text</span>
+</a>
+                                        </xmp>
+                                    </pre>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                            <p class="text-end"><a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#non-text-content">Success Criterion 1.1.1 Non-text Content</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>Reflow</h2>
+                            <h3>O conteúdo pode ser apresentado sem perda de informação ou funcionalidade e sem exigir scroll horizontal com zoom de até <strong>400%</strong></h3>
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <figure>
+                                <img src="src/assets/images/zomm-400.png" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                            <p class="text-end"><a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#reflow">Success Criterion 1.4.10 Reflow</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="slide__header">
+                            <h2>Espaçamento de Texto</h2>
+                            <!-- <h3></h3> -->
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="slide__content">
+                            <p>Não pode haver nenhuma perda de conteúdo ou funcionalidade pela configuração manual de todos os itens a seguir:</p>
+                            <ul>
+                                <li>Altura da linha (espaçamento entre linhas) de pelo menos 1,5 vezes o tamanho da fonte</li>
+                                <li>Espaçamento entre os parágrafos subsequentes de pelo menos 2 vezes o tamanho da fonte</li>
+                                <li>Espaçamento entre letras de pelo menos 0,12 vezes o tamanho da fonte</li>
+                                <li>Espaçamento entre palavras de pelo menos 0,16 vezes o tamanho da fonte</li>
+                            </ul>
+                            <hr>
+                            <p>
+                                O objetivo desta técnica é permitir que um usuário altere o espaçamento do texto por meio do 
+                                <strong>
+                                    <a data-bs-toggle="offcanvas" href="#spacingCSSExample" role="button" aria-controls="spacingCSSExample">CSS</a>, 
+                                    <a href="http://www.html5accessibility.com/tests/tsbookmarklet.html">bookmarklets</a>, 
+                                    extensões ou aplicativos.
+                                </strong>
+                            </p>
+                            <hr>
+                            <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                                <div>Nunca devemos especificar a propriedade <code>"height"</code> em contêineres de texto. <br>Isso evita erros caso o texto se expanda verticalmente.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="slide__side">
+                            <p class="text-end"><a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#text-spacing">Success Criterion 1.4.12 Text Spacing</a></p>
+                            <p class="text-end"><a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C36.html">Allowing for text spacing override</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="spacingCSSExample" aria-labelledby="spacingCSSExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="spacingCSSExampleLabel">CSS example</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <pre class="prettyprint">
+                    <xmp>
+/* rules for bookmarklet test */
+
+* {
+    line-height: 1.5 !important;
+    letter-spacing: 0.12em !important;
+    word-spacing: 0.16em !important;
+}
+
+p{
+    margin-bottom: 2em !important;
+}                    
+                    </xmp>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section -->
+    <section class="slide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="slide__header">
+                        <h2>Conteúdo em foco por mouse ou teclado </h2>
+                        <h3>Quando o hover do mouse, ou o focus do teclado exibem algum conteúdo, os itens a seguir devem ser respeitados:</h3>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="slide__content">
+                        <ul>
+                            <li><strong>Descartável:</strong> É possível ocultar o conteúdo adicional sem mover o cursor ou o foco do teclado, a menos que o conteúdo adicional comunique um erro de input ou não oculte ou substitua outro conteúdo (ESC, por exemplo);</li>
+                            <li><strong>"Hoverable"</strong> Se passar o cursor sobre o conteúdo adicional o ativa, então o cursor poderá ser movido sobre o conteúdo adicional sem que o conteúdo desapareça (tooltips, por exemplo);</li>
+                            <li><strong>Persistente:</strong> O conteúdo adicional permanece visível até que o over ou focus do teclado seja removido, o usuário o descarte ou se a informação não seja mais válida.</li>
+                        </ul>
+                        <br>
+                        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img"
+                                aria-label="Warning:">
+                                <path
+                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            <div>Tooltips personalizados, submenus e outros popups <strong><u>não modais</u></strong> exibidos ao passar o cursor sobre e com o foco são exemplos de conteúdos adicionais cobertos por esse critério.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="slide__side">
+                        <p class="text-end">
+                            <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#content-on-hover-or-focus">
+                                Success Criterion 1.4.13 Content on Hover or Focus
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section -->
+    <section class="slide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="slide__header">
+                        <h2>Acessível por Teclado</h2>
+                        <h3>Fazer com que toda funcionalidade fique disponível a partir de um teclado</h3>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="slide__content">
+                        <h3>Critério de Sucesso <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#no-keyboard-trap">2.1.2</a> - <i>No Keyboard Trap</i> (A)</h3>
+                        <p>Se o foco puder ser movido para um componente utilizando um teclado, então o foco pode ser retirado desse componente utilizando apenas o teclado e, se for necessário mais do que as setas, tab ou outros métodos de saída normalmente utilizados, o usuário deve ser informado sobre o método para retirar o foco.</p>
+                        <br><hr><br>
+                        <h3>Critério de Sucesso <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#keyboard-no-exception">2.1.3</a> - Teclado Sem Exceção (AAA)</h3>
+                        <p>Toda a funcionalidade é acessível através de um teclado.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="slide__side">
+                        <p class="text-end">
+                            <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#keyboard-accessible">
+                                Guideline 2.1 Keyboard Accessible
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section -->
+    <section class="slide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="slide__header">
+                        <h2>Tempo Suficiente</h2>
+                        <h3>Fornecer aos usuários tempo suficiente para ler e utilizar o conteúdo.</h3>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="slide__content">
+                        <h3>Critério de Sucesso <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#pause-stop-hide">2.2.2</a> Colocar em Pausa, Parar, Ocultar (A)</h3>
+                        <br>
+                        <ul>
+                            <li><strong>Moving, blinking, scrolling:</strong> Para quaisquer informações em movimento, em modo intermitente ou em deslocamento, que (1) sejam iniciadas automaticamente, (2) durem mais de cinco segundos, e (3) sejam apresentadas em paralelo com outro conteúdo, existe um mecanismo para o usuário colocar em <strong>pausa, parar, ou ocultar</strong> as mesmas, a menos que este movimento faça parte de uma atividade na qual seja essencial;</li>
+                            <li><strong>Auto-updating:</strong> O mesmo vale pare seções onde o conteúdo é atualizado automaticamente</li>
+                        </ul>
+                        
+                        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img"
+                                aria-label="Warning:">
+                                <path
+                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            <div>Exemplos: Vídeos, sliders, animações, jogos, áudio, publicidade, informações meteorológicas atualizadas automaticamente, notícias, atualizações de preços de ações, etc.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="slide__side">
+                        <p class="text-end">
+                            <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#enough-time">
+                                Guideline 2.2 Enough Time
+                            </a>
+                        </p>
+                        <p class="text-end">
+                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html">
+                                Pause, Stop, Hide (Level A)
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section -->
+    <section class="slide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="slide__header">
+                        <h2>Convulsões e Reações Físicas</h2>
+                        <h3>Não criar conteúdo de uma forma conhecida por causar convulsões e reações físicas.</h3>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="slide__content">
+                        <h3>Critério de Sucesso <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#three-flashes">2.3.2</a> Três Flashes (AAA)</h3>
+                        <p>As páginas web não incluem qualquer conteúdo que pisca mais de três vezes no período de um segundo.</p>
+                        <br>
+                        <hr>
+                        <br>
+                        <h3>Critério de Sucesso <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#animation-from-interactions">2.3.3</a> Animação de Interações (AAA)</h3>
+                        <p>A animação de movimento acionada por interação pode ser desativada, a menos que a animação seja essencial para a funcionalidade ou para as informações que estão sendo transmitidas.</p>
+                        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img"
+                                aria-label="Warning:">
+                                <path
+                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            <div>Utilizar a Media Query <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">prefers-reduced-motion</a></div>
+                        </div>
+                        <h6>Usuários com distúrbios de movimento vestibular (tontura provocada pelo movimento, labirintite, por exemplo) podem desejar ativar o recurso de redução de movimento diretamente em seu dispositivo</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="slide__side">
+                        <p class="text-end">
+                            <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#seizures-and-physical-reactions">
+                                Guideline 2.3 Seizures and Physical Reactions
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section -->
+    <section class="slide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="slide__header">
+                        <h2>Navegável</h2>
+                        <h3>Fornecer maneiras de ajudar os usuários a navegar, localizar conteúdos e determinar onde se encontram.</h3>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="slide__content">
+                        <h3>Critério de Sucesso <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#bypass-blocks">2.4.1</a> - Ignorar Blocos (A)</h3>
+                        <p>Um mecanismo está disponível para ignorar blocos de conteúdo que são repetidos em várias páginas web.</p>
+                        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img"
+                                aria-label="Warning:">
+                                <path
+                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            <div>Criar um link <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G1">Skip to main</a> no topo da página, que vai direto para a seção <code>main</code></div>
+                        </div>
+                        <h6>
+                            Exemplo: <a href="https://pt.wikipedia.org">https://pt.wikipedia.org</a>. Aperte "Tab" assim que a página for carregada.
+                        </h6>
+
+                        <br><hr><br>
+
+                        <h3>Critério de Sucesso <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#focus-order">2.4.3</a> - Ordem de Foco</h3>
+                        <p>Se a sequência de navegação afetar o significado ou a operação, os componentes que podem ser focados recebem o foco em uma ordem que preserva o significado e a operabilidade.</p>
+                        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img"
+                                aria-label="Warning:">
+                                <path
+                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            <div>Como resolver: Utilizar atributo <code>tabindex</code> quando necessário.</div>
+                        </div>
+
+                        <br><hr><br>
+
+                        <h3>Critério de Sucesso <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#link-purpose-in-context">2.4.4</a> - Finalidade do Link Em contexto (A)</h3>
+                        <p>A finalidade de cada link pode ser determinada a partir do link sozinho ou a partir do texto do link em conjunto com seu respectivo contexto do link determinado por meio de código de programação,exceto quando a finalidade do link for ambígua para os usuários em geral.</p>
+                        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img"
+                                aria-label="Warning:">
+                                <path
+                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            <div>Como resolver: Se houver um título que descreva a funcionalidade, usar atributo <code>aria-labelledby</code>; <br>Se não, adicionar a descrição com o atributo <code>aria-label.</code></div>
+                        </div>
+
+                        <br><hr><br>
+
+                        <h3>Critério de Sucesso <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#focus-visible">2.4.7</a> - Foco Visível (AA)</h3>
+                        <p>Todos os elementos que podem ser alcançados pelo teclado, devem ter um indicador de foco visível.</p>
+                        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img"
+                                aria-label="Warning:">
+                                <path
+                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            <div>Manter o indicador padrão de <code>:focus</code> / <code>:focus-visible</code> do browser, ou adicionar manualmente em elementos customizados.</div>
+                        </div>
+
+                        <br><hr><br>
+
+                        <h3>Critério de Sucesso <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#section-headings">2.4.10</a> - Section Headings (AAA)</h3>
+                        <p>Utilizados para organizar o conteúdo na página.</p>
+                        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16" role="img"
+                                aria-label="Warning:">
+                                <path
+                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            <div>Organizar o conteúdo utilizando as tags corretas, respeitando a hierarquia <code>&lt;h1&gt;</code> , <code>&lt;h2&gt;</code> , <code>&lt;h3&gt;</code> ...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="slide__side">
+                        <p class="text-end">
+                            <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#navigable">
+                                Guideline 2.4 Navigable
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section -->
+    <section class="slide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="slide__header">
+                        <h2>Tamanho do Alvo (Área Clicável) (AAA)</h2>
+                        <!-- <h3></h3> -->
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="slide__content">
+                        <h3>O tamanho de alvos clicáveis deve ser de pel menos <strong><u>44px</u> por <u>44px</u></strong>, exceto quando:</h3>
+                        <br>
+                        <ul>
+                            <li><strong>Equivalente:</strong> O alvo está disponível por meio de um outro link ou botão equivalente na mesma página, com pelo menos 44 por 44 pixels;</li>
+                            <li><strong>Inline:</strong> O alvo está em uma sentença ou bloco de texto;</li>
+                            <li><strong>User Agent Control:</strong> O tamanho do alvo é determinado pelo "User Agent" e não é modificado pelo autor;</li>
+                            <li><strong>Essencial:</strong> Uma apresentação específica do alvo é essencial para as informações que estão sendo transmitidas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="slide__side">
+                        <p class="text-end">
+                            <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#target-size">
+                                Success Criterion 2.5.5 Target Size
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section -->
+    <section class="slide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="slide__header">
+                        <h2>Alguns outros pontos importantes</h2>
+                        <!-- <h3></h3> -->
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="slide__content">
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded">aria-expanded</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed">aria-pressed</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live">aria-live</a></li>
+                            <li><a href="https://www.w3schools.com/tags/att_disabled.asp">"disabled" atribute</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="slide__side">
+                        <p class="text-end">
+                            <!-- <a href="https://www.w3.org/TR/2018/REC-WCAG21-20180605/#target-size">
+                                Success Criterion 2.5.5 Target Size
+                            </a> -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+<script src="src/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+</html>
